@@ -5,6 +5,7 @@ type PROPS = {
   tasks: TaskType[];
   removeTask: (elID: string) => void;
   addTask: (inputText: string) => void;
+  changeStatus: (taskId: string, isDone: boolean)=>void
 };
 
 type TaskType = {
@@ -33,6 +34,12 @@ export function Todolist(props: PROPS) {
       filteredTasks = props.tasks;
   }
 
+
+  const onChangeCHeckboxHandler =(tId: string, tIsDone: boolean)=>{
+    console.log(tId,'want to change')
+    props.changeStatus(tId, tIsDone)
+  }
+
   let mapedTasks = filteredTasks.length?
   filteredTasks.map((el) => {
     return (
@@ -42,7 +49,11 @@ export function Todolist(props: PROPS) {
            X
            </button>
         <span>{el.title}</span>
-        <input type="checkbox" checked={el.isDone} />
+        <input
+         type="checkbox"
+          checked={el.isDone}
+          onChange = {()=>onChangeCHeckboxHandler(el.id, el.isDone)}
+          />
 
       </div>
     )
