@@ -61,29 +61,38 @@ export function Todolist(props: PROPS) {
 
   
 
-  let [inputText, setInputText] = useState("");
+  let [inputText, setInputText] = useState("")
+
+   // сделаем стэйт для регистрации ошибки ввода текста в поле инпута
+
+  let[error,setError] = useState<string | null>(null)//useState может быть или строкой или null и ничем больше
 
   const onClickButtonAddTaskHandler = () => {
+    
     if (inputText.trim() === "") {
-      setInputText("");
+      setInputText("")
+      setError('Пустая запись, бро !')
     } else {
-      props.addTask(inputText);
-      setInputText("");
+      props.addTask(inputText)
+      setInputText("")
     }
-  };
+  }
 
   const onChangeInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputText(event.currentTarget.value);
+    setInputText(event.currentTarget.value)
+    
   };
 
   const onKeyDownInputHandler = (
     event: React.KeyboardEvent<HTMLInputElement>
   ) => {
+    setError(null)
     if (event.key === "Enter") {
       onClickButtonAddTaskHandler();
     }
-  };
+  }
 
+ 
   // JSX
   return (
     <div>
@@ -96,9 +105,12 @@ export function Todolist(props: PROPS) {
             value={inputText}
             onChange={onChangeInputHandler}
             onKeyDown={onKeyDownInputHandler}
+            className={error?'error':''}
           />
-
           <button onClick={onClickButtonAddTaskHandler}>+</button>
+
+          {/* текст об ошибке */}
+          {error && <div className="error-message">{error}</div>}
         </div>
 
         {mapedTasks}

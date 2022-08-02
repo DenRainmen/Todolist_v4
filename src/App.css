@@ -1,4 +1,27 @@
-#root{
+.App{
+  padding: 30px;
+  display: flex;
+}
+
+.App > div{
+  margin-right: 50px;
+}
+
+.error{
+  border: 1px solid red;
+}
+
+.error-message{
+  color: red;
+}
+
+
+
+
+
+
+/* Старый вариант (цветастый и сложный) */
+/* #root{
   margin-top: 1vw;
   display: flex;
   justify-content: center;
@@ -71,4 +94,4 @@ button{
   margin:  0.5vw;
   font-size: 1vw;
 }
-
+ */

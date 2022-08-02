@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { v1 } from "uuid";
-// import "./App.css";
+import "./App.css";
 import { Todolist } from "./Todolist";
 
 export const App = () => {
