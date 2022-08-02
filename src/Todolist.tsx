@@ -64,7 +64,7 @@ export function Todolist(props: PROPS) {
   let [inputText, setInputText] = useState("");
 
   const onClickButtonAddTaskHandler = () => {
-    if (inputText === "") {
+    if (inputText.trim() === "") {
       setInputText("");
     } else {
       props.addTask(inputText);
