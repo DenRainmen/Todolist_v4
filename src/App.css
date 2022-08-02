@@ -1,0 +1,74 @@
+#root{
+  margin-top: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.App {
+font-family: Lobster,cursive;
+  
+  width: 30%;
+  border-radius: 5% 5% 3% 3%;
+
+ 
+}
+
+.App>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+i.title{
+  background-color: rgb(183, 20, 189);
+  margin: 0;
+  font-size: 3vw;
+  width: 100%;
+  text-align: center;
+  border-radius: 1vw 1vw 0 0;
+  color: rgb(255, 255, 255)
+}
+
+.card-container{
+ outline: 1px solid rgb(151, 10, 156);
+  width: 99.2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0% 0% 3% 3%;
+}
+
+ul{
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 2vw;
+}
+
+
+[type="text"]{
+  font-size: 1.7vw;
+}
+
+[type="button"]{
+  background: rgb(190, 221, 15);
+  border-radius: 0.5vw 0.5vw 0.5vw 0.5vw;
+  font-size: 2vw;
+}
+
+
+button{
+  border-radius: 0.5vw 0.5vw 0.5vw 0.5vw;
+  background: rgb(9, 140, 228);
+  color:chartreuse;
+  font-family: Verdana;
+  letter-spacing: 0.2vw;
+  padding: 0.3vw;
+  margin:  0.5vw;
+  font-size: 1vw;
+}
+
