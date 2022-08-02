@@ -116,9 +116,23 @@ export function Todolist(props: PROPS) {
         {mapedTasks}
 
         <div>
-          <button onClick={() => ButtonFilterHandler("all")}>All</button>
-          <button onClick={() => ButtonFilterHandler("active")}>Active</button>
-          <button onClick={() => ButtonFilterHandler("completed")}>
+
+          <button
+           className={btnName==="all"?"active-filter":""}
+            onClick={() => ButtonFilterHandler("all")}
+            >
+              All
+            </button>
+
+          <button
+           className={btnName==="active"?"active-filter":""}
+           onClick={() => ButtonFilterHandler("active")}>
+            Active
+            </button>
+
+          <button
+          className={btnName==="completed"?"active-filter":""}
+           onClick={() => ButtonFilterHandler("completed")}>
             Completed
           </button>
         </div>
