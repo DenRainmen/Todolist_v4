@@ -43,7 +43,7 @@ export function Todolist(props: PROPS) {
   let mapedTasks = filteredTasks.length?
   filteredTasks.map((el) => {
     return (
-      <div key={el.id}>
+      <div key={el.id} className={el.isDone?'is-done':''}>
         <button
          onClick={()=>props.removeTask(el.id)}>
            X
