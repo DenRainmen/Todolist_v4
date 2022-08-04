@@ -99,7 +99,9 @@ export function Todolist(props: PROPS) {
       <i className="title">{`${props.title} ?`}</i>
 
       <div className="card-container">
-        <div>
+        <div
+        style={{paddingLeft: "1vw"}}
+        >
           <input
             type="text"
             value={inputText}

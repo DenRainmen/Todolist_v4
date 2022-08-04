@@ -3,9 +3,9 @@
   display: flex;
 }
 
-.App > div{
+/* .App > div{
   margin-right: 50px;
-}
+} */
 
 .error{
   border: 1px solid red;
@@ -16,7 +16,8 @@
 }
 
 .active-filter{
-  background-color: aquamarine;
+  background-color: rgb(191, 26, 224);
+  font-size: 2vw;
 }
 
 .is-done{
@@ -29,7 +30,9 @@
 
 
 /* Старый вариант (цветастый и сложный) */
-/* #root{
+
+
+ #root{
   margin-top: 1vw;
   display: flex;
   justify-content: center;
@@ -52,9 +55,11 @@ font-family: Lobster,cursive;
   align-items: center;
   flex-direction: column;
   width: 100%;
+  
 }
 
 i.title{
+  outline: 1px solid rgb(151, 10, 156);
   background-color: rgb(183, 20, 189);
   margin: 0;
   font-size: 3vw;
@@ -65,11 +70,11 @@ i.title{
 }
 
 .card-container{
- outline: 1px solid rgb(151, 10, 156);
+ border: 1.5px solid rgb(151, 10, 156);
   width: 99.2%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   flex-direction: column;
   border-radius: 0% 0% 3% 3%;
 }
@@ -94,12 +99,12 @@ ul{
 
 button{
   border-radius: 0.5vw 0.5vw 0.5vw 0.5vw;
-  background: rgb(9, 140, 228);
+  background: rgb(36, 129, 190);
   color:chartreuse;
   font-family: Verdana;
   letter-spacing: 0.2vw;
   padding: 0.3vw;
   margin:  0.5vw;
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
- */
+
